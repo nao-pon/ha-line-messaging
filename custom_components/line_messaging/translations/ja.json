@@ -1,0 +1,17 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "その名称はすでに登録されています。"
+    },
+    "step": {
+      "user": {
+        "title": "LINE Messaging のための任意の名称とチャネルアクセストークン(長期)",
+        "description": "名称は通知のエンティティIDとして使用されます。また、アクセストークンは https://developers.line.biz/console/ の「Messaging API設定」で取得できます。",
+        "data": {
+          "name": "通知の名称（entity_id）",
+          "access_token": "チャネルアクセストークン（長期）"
+        }
+      }
+    }
+  }
+}

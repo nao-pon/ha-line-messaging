@@ -1,0 +1,15 @@
+{
+    "config": {
+      "step": {
+        "user": {
+          "description": "Please refer to the documentation to make sure all requirements are met.",
+          "data": {
+            "name": "[%key:common::config_flow::data::name%]"
+          }
+        }
+      },
+      "abort": {
+        "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+      }
+    }
+  }

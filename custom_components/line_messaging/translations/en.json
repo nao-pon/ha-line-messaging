@@ -1,0 +1,17 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "That name is already registered."
+    },
+    "step": {
+      "user": {
+        "title": "Arbitrary name and Channel access token (long-lived) for LINE Messaging",
+        "description": "The name will be used as the entity ID for notifications. Also, access tokens can be obtained in \"Messaging API settings\" at https://developers.line.biz/console/.",
+        "data": {
+          "name": "Name of notify service (entity_id)",
+          "access_token": "Channel access token (long-lived)"
+        }
+      }
+    }
+  }
+}

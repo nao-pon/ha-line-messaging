@@ -1,0 +1,12 @@
+{
+    "domain": "line_messaging",
+    "name": "Line Messaging",
+    "documentation": "https://github.com/nao-pon/ha-line-messaging",
+    "issue_tracker": "https://github.com/nao-pon/ha-line-messaging/issues",
+    "dependencies": [],
+    "codeowners": ["@nao-pon"],
+    "config_flow": true,
+    "iot_class": "cloud_push",
+    "version": "2025.3.0",
+    "requirements": []
+}

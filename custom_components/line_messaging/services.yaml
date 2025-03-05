@@ -1,0 +1,9 @@
+notify:
+  description: Send a text message to Line Using Line Messaging (text).
+  # Different fields that your service accepts
+  fields:
+    # Key of the field
+    message:
+      description: message to line
+      required: true
+      example: "Hello"
