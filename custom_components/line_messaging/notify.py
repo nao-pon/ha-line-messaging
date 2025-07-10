@@ -12,6 +12,7 @@ With this custom component loaded, you can send messaged to line Notify.
 """
 
 import json
+from typing import Any
 import requests
 import logging
 import voluptuous as vol
@@ -52,12 +53,11 @@ class LineMessageingService(BaseNotificationService):
         """Initialize the service."""
         self.access_token = access_token
 
-    def send_message(self, message="", **kwargs):
+    def send_message(self, message: str, **kwargs: Any) -> None:
         """Send some message."""
         data = kwargs.get(ATTR_DATA)
         if data is None:
             data = {}
-
         cmd = "message/broadcast"
         payload = {}
         masseges = []
@@ -130,6 +130,6 @@ class LineMessageingService(BaseNotificationService):
             "AUTHORIZATION": "Bearer " + self.access_token,
         }
 
-        r = requests.Session().post(BASE_URL + cmd, headers=headers, json=payload)
-        if r.status_code != 200:
-            _LOGGER.error(r.text)
+        r = requests.post(BASE_URL + cmd, headers=headers, json=payload)
+        if r.status_code >= 400:
+            _LOGGER.error(f"Request error ({r.status_code}): {r}")
